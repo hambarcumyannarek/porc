@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="header">
+
+            <div class="nav">
+                <div class="logo"><h2>Portfo<span style="color: #FF1C53;">lio</span></h2></div>
+                
+
+                <div class="links">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div> 
+
+                <div class="button">
+                    <button>Subscribe</button>
+                </div>
+
+                <div class="hamburger-menu">
+                    <ion-icon class="menu" name="menu"></ion-icon>
+                    <ion-icon class="xach" name="close"></ion-icon>
+                </div>
+
+
+                <div class="resposive-menu">
+                    <ul>
+                        <li><a onclick="a()" href="#header">Home</a></li>
+                        <li><a onclick="a()" href="#about">About Us</a></li>
+                        <li><a onclick="a()" href="#services">Services</a></li>
+                        <li><a onclick="a()" href="#skills">Skills</a></li>
+                        <li><a onclick="a()" href="#contact">Contact Us</a></li>
+                    </ul>
+
+                    <button>Subscribe</button>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="text">
+                    <p>Hello, my name is</p>
+                    <h1>Rembo <span style="color: #FF1C53;">Hovannisyan</span></h1>
+                    <h3>I'am a Web Developer</h3>
+
+                    <div class="inputs">
+                        <input type="text" placeholder="Enter Your Email">
+                        <button>last start</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <div id="about" class="about">
+        <div class="container">
+            <div class="card1">
+               <img src="img/main-img.png">
+            </div>
+            <div class="card2">
+                <h1>About Me</h1>
+                <h3>Developer <span style="color: #FF1c53">& Desinger</span></h3>   
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque nihil quae, aspernatur harum officia voluptate error perferendis molestiae iusto veritatis ipsa beatae explicabo in earum voluptatibus, laborum unde ad accusantium dolorem? Placeat nesciunt provident odit quo, dolorum quis perspiciatis repudiandae nemo inventore quasi corrupti quibusdam dolor ea reiciendis temporibus illo ullam nobis! Repellat, sint officia.</p>  
+                <button>Let's Talk</button> 
+            </div>
+        </div>
+    </div>
+    
+    <div id="services" class="services">
+        <div class="title"><h1>Our Services</h1></div>
+
+        <div class="container">
+            <div class="card">
+                <div class="mijuk">
+                <ion-icon name="menu"></ion-icon>
+                <h3>Web Developent</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum quibusdam, dolorum vero aperiam in explicabo enim consequuntur atque.</p>
+                <button>Read More</button>
+            </div>
+            </div>
+            <div class="card">
+                <div class="mijuk">
+                <ion-icon name="person-outline"></ion-icon>
+                <h3>Web Developent</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aut, temporibus qui quia cupiditate voluptatem mollitia voluptas hic vero reiciendis asperiores.</p>
+                <button>Read More</button>
+            </div>
+        </div>
+            <div class="card">
+                <div class="mijuk">
+                <ion-icon name="notifications-outline"></ion-icon>
+                <h3>Web Developent</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab! Deserunt, vero quo temporibus similique perferendis aut officiis sequi soluta fugiat.</p>
+                <button>Read More</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div id="skills" class="skills">
+        <h1>Let Me Get You A Beautiful Website.</h1>
+        <button>Hire Me</button>
+    </div>
+
+    <div id="contact" class="contact">
+        <h1>Designer<span style="color: #FF1C53;">Mr. Narek</span></h1>
+        <p>I know Html:5, CSS3, JS, TaypScript, Python, PHP, Richt JS, C++, Java, jQuery, Ul/Ux, Node JS, MySQL, Ps:<span style="color: #fcfc; text-decoration: underline; cursor: pointer;"> I love my job very much </span> </p>
+        
+        <div class="icons">
+            <div><ion-icon name="logo-facebook"></ion-icon></div>
+            <div><ion-icon name="logo-instagram"></ion-icon></div>
+            <div><ion-icon name="logo-whatsapp"></ion-icon></div>
+        </div>
+   
+    </div>
+
+    <script>
+
+       window.addEventListener('scroll', function() {
+        let nav = document.querySelector('.nav');
+
+        nav.classList.toggle('active', window.scrollY > 0);
+       })
+
+
+        let humbMenu = document.querySelector('.menu');
+
+        humbMenu.addEventListener('click', function() {
+            let resposiveMenu = document.querySelector('.resposive-menu');
+            let xach = document.querySelector('.xach');
+            let humbMenu = document.querySelector('.menu');
+
+            resposiveMenu.classList.toggle('active');
+            xach.classList.toggle('active');
+            humbMenu.style.display = 'none'; 
+        })
+
+        let xach = document.querySelector('.xach');
+
+        xach.addEventListener('click', function() {
+            let resposiveMenu = document.querySelector('.resposive-menu');
+            let xach = document.querySelector('.xach');
+            let humbMenu = document.querySelector('.menu');
+
+            resposiveMenu.classList.remove('active');
+            xach.classList.remove('active');
+            humbMenu.style.display = 'block'; 
+        })   
+
+            function a() {
+            let resposiveMenu = document.querySelector('.resposive-menu');
+            let xach = document.querySelector('.xach');
+            let humbMenu = document.querySelector('.menu');
+
+            resposiveMenu.classList.remove('active');
+            xach.classList.remove('active');
+            humbMenu.style.display = 'block'; 
+         }
+    </script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
